@@ -8,7 +8,7 @@ RUN set -eux; \
       postgresql-18-postgis-3 \
       postgresql-18-postgis-3-scripts \
       gdal-bin \
-      proj-bin; \
+      proj-bin \n      postgresql-18-pgcron; \
     rm -rf /var/lib/apt/lists/*
 
 # Optional: auto-enable on first init (new clusters only)
