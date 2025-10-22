@@ -9,7 +9,8 @@ RUN set -eux; \
       postgresql-18-postgis-3-scripts \
       gdal-bin \
       proj-bin \
-      postgresql-18-cron; \
+      postgresql-18-cron \
+      postgresql-18-contrib; \
     rm -rf /var/lib/apt/lists/*
 
 # Optional: auto-enable on first init (new clusters only)
