@@ -16,6 +16,4 @@ RUN set -eux; \
 # Configure pg_cron
 RUN echo "shared_preload_libraries = 'pg_cron'" >> /usr/share/postgresql/postgresql.conf.sample && \
     echo "cron.database_name = 'avizi'" >> /usr/share/postgresql/postgresql.conf.sample
-
-# Auto-enable schemas and extensions on first init (new clusters only)
-# COPY init-db.sql /docker-entrypoint-initdb.d/01-init-db.sql
+    

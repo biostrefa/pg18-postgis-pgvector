@@ -1,0 +1,120 @@
+
+Actions
+
+      
+
+The files belonging to this database system will be owned by user "postgres".
+
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+
+The default database encoding has accordingly been set to "UTF8".
+
+The default text search configuration will be set to "english".
+
+Data page checksums are enabled.
+
+fixing permissions on existing directory /var/lib/postgresql/18/docker ... ok
+
+creating subdirectories ... ok
+
+selecting dynamic shared memory implementation ... posix
+
+selecting default "max_connections" ... 100
+
+selecting default "shared_buffers" ... 128MB
+
+selecting default time zone ... Etc/UTC
+
+creating configuration files ... ok
+
+running bootstrap script ... ok
+
+performing post-bootstrap initialization ... ok
+
+syncing data to disk ... ok
+
+initdb: warning: enabling "trust" authentication for local connections
+
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/18/docker -l logfile start
+
+waiting for server to start....2025-10-22 20:52:30.573 UTC [49] LOG:  starting PostgreSQL 18.0 (Debian 18.0-1.pgdg12+3) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+
+2025-10-22 20:52:30.575 UTC [49] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+
+2025-10-22 20:52:30.581 UTC [55] LOG:  database system was shut down at 2025-10-22 20:52:30 UTC
+
+2025-10-22 20:52:30.585 UTC [49] LOG:  database system is ready to accept connections
+
+2025-10-22 20:52:30.590 UTC [58] FATAL:  database "avizi" does not exist
+
+2025-10-22 20:52:30.594 UTC [49] LOG:  background worker "pg_cron launcher" (PID 58) exited with exit code 1
+
+ done
+
+server started
+
+CREATE DATABASE
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/0001-create-schema.sql
+
+CREATE SCHEMA
+
+CREATE SCHEMA
+
+CREATE EXTENSION
+
+CREATE EXTENSION
+
+CREATE EXTENSION
+
+CREATE EXTENSION
+
+CREATE EXTENSION
+
+CREATE EXTENSION
+
+CREATE EXTENSION
+
+CREATE EXTENSION
+
+CREATE EXTENSION
+
+waiting for server to shut down....2025-10-22 20:52:31.518 UTC [49] LOG:  received fast shutdown request
+
+2025-10-22 20:52:31.520 UTC [49] LOG:  aborting any active transactions
+
+2025-10-22 20:52:31.522 UTC [49] LOG:  background worker "logical replication launcher" (PID 59) exited with exit code 1
+
+2025-10-22 20:52:31.527 UTC [53] LOG:  shutting down
+
+2025-10-22 20:52:31.528 UTC [53] LOG:  checkpoint starting: shutdown immediate
+
+2025-10-22 20:52:31.576 UTC [53] LOG:  checkpoint complete: wrote 2007 buffers (12.2%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 1 recycled; write=0.029 s, sync=0.015 s, total=0.049 s; sync files=325, longest=0.002 s, average=0.001 s; distance=14672 kB, estimate=14672 kB; lsn=0/25AB4B8, redo lsn=0/25AB4B8
+
+2025-10-22 20:52:31.594 UTC [49] LOG:  database system is shut down
+
+ done
+
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2025-10-22 20:52:31.649 UTC [1] LOG:  starting PostgreSQL 18.0 (Debian 18.0-1.pgdg12+3) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+
+2025-10-22 20:52:31.650 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+
+2025-10-22 20:52:31.650 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+
+2025-10-22 20:52:31.652 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+
+2025-10-22 20:52:31.657 UTC [74] LOG:  database system was shut down at 2025-10-22 20:52:31 UTC
+
+2025-10-22 20:52:31.661 UTC [1] LOG:  database system is ready to accept connections
+
+2025-10-22 20:52:31.671 UTC [77] LOG:  pg_cron scheduler started
