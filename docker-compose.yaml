@@ -1,0 +1,29 @@
+services:
+  postgres:
+    container_name: avizi-demo-db
+    image: "ghcr.io/biostrefa/pg18-postgis-pgvector:latest"
+    restart: unless-stopped
+    volumes:
+      - "{{ avizi_db_config_location }}/initdb.d:/docker-entrypoint-initdb.d:ro"
+      - "{{ avizi_db_db_location }}/pg_data/:/var/lib/postgresql/18/docker"
+    command:
+      - "postgres"
+      - "-c"
+      - "intervalstyle=iso_8601"
+    ports:
+      - "{{ postgres_port }}:5432"
+      # Set shared memory limit to avoid issues with large queries or sorting
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: "{{ postgres_password }}"
+      POSTGRES_USER: "{{ postgres_user }}"
+      POSTGRES_DB: "{{ postgres_db }}"
+      # Important for Postgres 18+: Version-specific PGDATA path
+      PGDATA: "/var/lib/postgresql/18/docker"
+    networks:
+      - avizi-network
+
+networks:
+  avizi-network:
+    name: avizi-network
+    external: true
