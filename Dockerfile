@@ -10,7 +10,7 @@ RUN set -eux; \
       gdal-bin \
       proj-bin \
       postgresql-18-cron \
-      postgresql-18-contrib; \
+      postgresql-contrib; \
     rm -rf /var/lib/apt/lists/*
 
 # Optional: auto-enable on first init (new clusters only)
