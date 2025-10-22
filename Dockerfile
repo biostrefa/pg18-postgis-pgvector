@@ -14,4 +14,4 @@ RUN set -eux; \
     rm -rf /var/lib/apt/lists/*
 
 # Optional: auto-enable on first init (new clusters only)
-COPY init-extensions.sql /docker-entrypoint-initdb.d/10-extensions.sql
+# COPY init-extensions.sql /docker-entrypoint-initdb.d/10-extensions.sql
