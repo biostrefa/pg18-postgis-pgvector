@@ -14,6 +14,5 @@ RUN set -eux; \
     rm -rf /var/lib/apt/lists/*
 
 # Configure pg_cron
-RUN echo "shared_preload_libraries = 'pg_cron'" >> /usr/share/postgresql/postgresql.conf.sample && \
-    echo "cron.database_name = 'avizi'" >> /usr/share/postgresql/postgresql.conf.sample
+RUN echo "shared_preload_libraries = 'pg_cron,vector,postgis'" >> /usr/share/postgresql/postgresql.conf.sample
     
